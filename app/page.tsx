@@ -249,7 +249,7 @@ export default function NFTreesLanding() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-green-600">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-green-900">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Make a Difference?</h2>
           <p className="text-xl text-green-100 mb-8">

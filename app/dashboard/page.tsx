@@ -49,7 +49,7 @@ const mockTrees = [
     status: "Healthy",
     carbonOffset: "18.7 kg CO2",
     nftId: "#1235",
-    image: "/images/nft-mahogany-tree.jpg",
+    image: "https://imgs.search.brave.com/rKURiAANTdNzBGcHGv000vJMiF_XQZbLeMgQdBAccng/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTQ5/NjU4OTgxNC9waG90/by9yZWQtbWFob2dh/bnktdHJlZS1raXJz/dGVuYm9zY2gtY2Fw/ZS10b3duLXNvdXRo/LWFmcmljYS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9MTIx/OXNhWXpsbmZCS2Nw/YWFfVFYzZENjM1At/TW1KSXBlOXpOWEFl/SGdYMD0",
     growth: 65,
   },
 ]

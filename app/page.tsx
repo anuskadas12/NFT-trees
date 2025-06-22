@@ -2,59 +2,63 @@ import { ArrowRight, Leaf, MapPin, Users, Bot, Zap, Globe, Shield } from "lucide
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import Link from "next/link"
 
 export default function NFTreesLanding() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <Badge className="mb-6 bg-green-100 text-green-800 hover:bg-green-100">
-            {/* 🌱 Blockchain meets Environmental Impact */}
-          </Badge>
+      {/* Hero Section with Background */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
+          }}
+        />
+        
+        {/* Content Overlay */}
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
+          {/* <Badge className="mb-6 bg-green-100/90 text-green-800 hover:bg-green-100/90 backdrop-blur-sm">
+            🌱 Blockchain meets Environmental Impact
+          </Badge> */}
 
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Plant Trees, Mint <span className="text-green-600">NFTs</span>, <br className="hidden md:block" />
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+            Plant Trees, Mint <span className="text-green-400">NFTs</span>, <br className="hidden md:block" />
             Save the Planet
           </h1>
 
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
             Every NFT represents a real tree planted and tracked in the real world. Watch your digital collectibles
             evolve as your trees grow, creating lasting environmental impact through blockchain technology.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Link href="/plant">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-3">
-                Start Planting Trees
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-            <Link href="/tree-map">
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-green-600 text-green-600 hover:bg-green-50 px-8 py-3"
-              >
-                View Tree Map
-                <MapPin className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
+            <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 shadow-lg">
+              Start Planting Trees
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-white/80 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-3 shadow-lg"
+            >
+              View Tree Map
+              <MapPin className="ml-2 w-5 h-5" />
+            </Button>
           </div>
 
           {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">50,000+</div>
-              <div className="text-gray-600">Trees Planted</div>
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+              <div className="text-3xl font-bold text-green-400 mb-2">50,000+</div>
+              <div className="text-gray-200">Trees Planted</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">25,000+</div>
-              <div className="text-gray-600">NFTs Minted</div>
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+              <div className="text-3xl font-bold text-green-400 mb-2">25,000+</div>
+              <div className="text-gray-200">NFTs Minted</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">15</div>
-              <div className="text-gray-600">Countries</div>
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+              <div className="text-3xl font-bold text-green-400 mb-2">15</div>
+              <div className="text-gray-200">Countries</div>
             </div>
           </div> */}
         </div>
@@ -134,10 +138,10 @@ export default function NFTreesLanding() {
       <section id="ai-tools" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-50 to-blue-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            {/* <Badge className="mb-4 bg-blue-100 text-blue-800 hover:bg-blue-100">
+            <Badge className="mb-4 bg-blue-100 text-blue-800 hover:bg-blue-100">
               <Bot className="w-4 h-4 mr-2" />
               AI-Powered Platform
-            </Badge> */}
+            </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Intelligent Environmental Tools</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Leverage AI to maximize environmental impact and optimize reforestation efforts
@@ -192,12 +196,10 @@ export default function NFTreesLanding() {
           </div>
 
           <div className="mt-12 text-center">
-            <Link href="/ai-tools">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
-                Explore AI Tools
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+              Explore AI Tools
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
           </div>
         </div>
       </section>
@@ -256,22 +258,18 @@ export default function NFTreesLanding() {
             Join thousands of eco-warriors creating lasting environmental impact through blockchain technology
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/plant">
-              <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 px-8 py-3">
-                Plant Your First Tree
-                <Leaf className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-            <Link href="/community">
-              {/* <Button
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-green-600 px-8 py-3"
-              >
-                Join Community
-                <Users className="ml-2 w-5 h-5" />
-              </Button> */}
-            </Link>
+            <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 px-8 py-3">
+              Plant Your First Tree
+              <Leaf className="ml-2 w-5 h-5" />
+            </Button>
+            {/* <Button
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-green-600 px-8 py-3"
+            >
+              Join Community
+              <Users className="ml-2 w-5 h-5" />
+            </Button> */}
           </div>
         </div>
       </section>
@@ -296,24 +294,24 @@ export default function NFTreesLanding() {
               <h3 className="font-semibold mb-4">Platform</h3>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <Link href="/tree-map" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-white transition-colors">
                     Tree Map
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/marketplace" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-white transition-colors">
                     Marketplace
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/dashboard" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-white transition-colors">
                     Dashboard
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/ai-tools" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-white transition-colors">
                     AI Tools
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -322,9 +320,9 @@ export default function NFTreesLanding() {
               <h3 className="font-semibold mb-4">Community</h3>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <Link href="/community" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-white transition-colors">
                     DAO Governance
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   <a href="https://discord.gg/nftrees" className="hover:text-white transition-colors">
@@ -337,9 +335,9 @@ export default function NFTreesLanding() {
                   </a>
                 </li>
                 <li>
-                  <Link href="/blog" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-white transition-colors">
                     Blog
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -348,31 +346,31 @@ export default function NFTreesLanding() {
               <h3 className="font-semibold mb-4">Support</h3>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <Link href="/help" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-white transition-colors">
                     Help Center
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/contact" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-white transition-colors">
                     Contact Us
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/privacy" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-white transition-colors">
                     Privacy Policy
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/terms" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-white transition-colors">
                     Terms of Service
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 NFTrees. All rights reserved. </p>
+            <p>&copy; 2024 NFTrees. All rights reserved.</p>
           </div>
         </div>
       </footer>
